@@ -10,3 +10,6 @@ set shiftwidth=4
 
 "Indent/outdent to nearest tabstop
 set shiftround
+
+" autoindent
+set autoindent
