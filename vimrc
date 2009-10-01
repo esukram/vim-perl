@@ -59,7 +59,22 @@ set visualbell
 
 " set spaces as '.'
 set list
-set listchars=trail:.
+set listchars=tab:\|·,trail:·
+
+" smaller line high, less spaces
+set lsp=0
+
+" minimal number of screen lines to keep above and below the cursor
+set scrolloff=5
+
+" minimal number of screen columns to keep to the left and to the right of the cursor
+set sidescrolloff=3
+
+" Folding stuff
+" fold only sub foldings
+set foldlevelstart=1
+" do not fold less than 10 lines
+set foldminlines=5
 
 "Highlight spaces at the end of lines
 let c_space_errors=1
