@@ -101,6 +101,19 @@ set history=100
 set backupdir=~/.vim/tmp
 set directory=~/.vim/tmp
 
+" set ctags of macports
+if has('mac')
+    let Tlist_Ctags_Cmd='/opt/local/bin/ctags'
+endif
+" exit vi even taglist is open
+let Tlist_Exit_OnlyWindow = 1
+" close fold in taglist
+let Tlist_File_Fold_Auto_Close = 1
+" Automatically update the taglist window to display tags for newly edited files
+let Tlist_Auto_Update = 1
+" Automatically highlight the current tag
+let Tlist_Auto_Highlight_Tag = 1
+
 """"""""""""""""
 " key bindings "
 """"""""""""""""
@@ -109,6 +122,9 @@ map <silent> <c-n> :tabnew<cr>
 
 " Hervorhebungen der Suche mit Strg-L enfernen
 map <silent> <c-l> :silent nohl<cr>
+"
+" Tag list toggle
+nnoremap <silent> <F4> :TlistToggle<CR><CR>
 
 " toggle paste mode
 set pastetoggle=<F8>
