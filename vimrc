@@ -143,3 +143,6 @@ nnoremap <silent> <F4> :TlistToggle<CR><CR>
 
 " toggle paste mode
 set pastetoggle=<F8>
+
+" use matchit plugin
+" http://www.vim.org/scripts/script.php?script_id=39
