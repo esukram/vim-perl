@@ -128,6 +128,8 @@ let Tlist_File_Fold_Auto_Close = 1
 let Tlist_Auto_Update = 1
 " Automatically highlight the current tag
 let Tlist_Auto_Highlight_Tag = 1
+" Sort taglist by names
+let Tlist_Sort_Type = "name"
 
 """"""""""""""""
 " key bindings "
