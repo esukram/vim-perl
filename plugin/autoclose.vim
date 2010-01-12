@@ -3,6 +3,7 @@
 " Version: 1.2
 " Last Modified: June 18, 2009
 " Description: AutoClose, closes what's opened.
+" Homepage: http://www.vim.org/scripts/script.php?script_id=1849
 "
 "    This plugin closes opened parenthesis, braces, brackets, quotes as you
 "    type them. As of 1.1, if you type the open brace twice ({{), the closing
