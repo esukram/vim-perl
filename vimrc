@@ -97,7 +97,9 @@ set statusline+=%m
 " set statusline+=%(\ %f%)
 " get current tag from tag list
 " display tag list only if tag list window is shown
-set statusline+=%{(exists('loaded_taglist')&&bufwinnr(g:TagList_title)!=-1)?\"[\".Tlist_Get_Tag_Prototype_By_Line(expand('%'),line('.')).\"]\":'no\ tags'}
+set statusline+=%{(exists('loaded_taglist')&&bufwinnr(g:TagList_title)!=-1)?\"\ [\".Tlist_Get_Tag_Prototype_By_Line(expand('%'),line('.')).\"]\ \":'no\ tags\ '}
+" display parsing error
+set statusline+=%{\ SyntasticStatuslineFlag()}
 " get [RO] flag
 set statusline+=%(\ %r%)
 " seperate between right- and left-aligned
@@ -133,6 +135,9 @@ let Tlist_Auto_Update = 1
 let Tlist_Auto_Highlight_Tag = 1
 " Sort taglist by names
 let Tlist_Sort_Type = "name"
+
+" automatically open error box
+let g:syntastic_auto_loc_list=1
 
 """"""""""""""""
 " key bindings "
