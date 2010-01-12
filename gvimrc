@@ -15,3 +15,8 @@ if has('mac')
     "set guifont=Monaco:h12
     set guifont=Bitstream_Vera_Sans_Mono:h12
 endif
+
+"Highlight spaces at the end of lines
+let c_space_errors=1
+highlight WhitespaceEOL ctermbg=red guibg=red
+match WhitespaceEOL /\s\+$/
