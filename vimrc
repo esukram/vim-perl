@@ -94,7 +94,10 @@ set statusline=""
 " get modified flag
 set statusline+=%m
 " get filename
-set statusline+=%(\ %f%)
+" set statusline+=%(\ %f%)
+" get current tag from tag list
+" display tag list only if tag list window is shown
+set statusline+=%{(exists('loaded_taglist')&&bufwinnr(g:TagList_title)!=-1)?\"[\".Tlist_Get_Tag_Prototype_By_Line(expand('%'),line('.')).\"]\":'no\ tags'}
 " get [RO] flag
 set statusline+=%(\ %r%)
 " seperate between right- and left-aligned
